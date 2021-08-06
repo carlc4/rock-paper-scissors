@@ -47,6 +47,15 @@
   } /* end of the for loop here */
 } /* end of the loop function here */
 
+function winConditions() {
+  if (playerScore > computerScore) {
+    return ("Game over! - You win! Player: " + playerScore/2 + " | Computer: " + computerScore/2) /* I don't know why but the score needs dividing by 2 to work properly */ 
+  }
+  else if (playerScore < computerScore) {
+    return ("Game over! - You lose! Player: " + playerScore/2 + " | Computer: " + computerScore/2) /* I don't know why but the score needs dividing by 2 to work properly */ 
+  }
+  else {return "Game over! - It's a draw! Player: " + playerScore/2 + " | Computer: " + computerScore/2} /* I don't know why but the score needs dividing by 2 to work properly */ 
+}
+
     game();
-    console.log("Game over! Player: " + playerScore/2 + " | Computer: " + computerScore/2) /* I don't know why but the score needs dividing by 2 to work properly */
-    
+    console.log(winConditions());
