@@ -12,28 +12,28 @@
     }
 
     function playRound() {
-      if ((playerSelection == "Rock" && computerSelection == "Paper")
-      || (playerSelection == "Paper" && computerSelection == "Scissors")
-      || (playerSelection == "Scissors" && computerSelection == "Rock")) 
+      if ((playerSelection3 == "Rock" && computerSelection == "Paper")
+      || (playerSelection3 == "Paper" && computerSelection == "Scissors")
+      || (playerSelection3 == "Scissors" && computerSelection == "Rock")) 
       {
-        return ("You lose! "+ computerSelection + "beats " + playerSelection);
+        return ("You lose! "+ computerSelection + " beats " + playerSelection3);
       }
-      else if ((playerSelection == "Rock" && computerSelection == "Scissors")
-      || (playerSelection == "Paper" && computerSelection == "Rock")
-      || (playerSelection == "Scissors" && computerSelection == "Rock")) 
+      else if ((playerSelection3 == "Rock" && computerSelection == "Scissors")
+      || (playerSelection3 == "Paper" && computerSelection == "Rock")
+      || (playerSelection3 == "Scissors" && computerSelection == "Rock")) 
       {
-        return ("You win! "+ playerSelection + " beats " + computerSelection);
+        return ("You win! "+ playerSelection3 + " beats " + computerSelection);
       }
       else {
-        return ("Draw! " + playerSelection + " is the same as " + computerSelection);
+        return ("Draw! " + playerSelection3 + " is the same as " + computerSelection);
       }
     }
 
     playerSelection = prompt(gameChoices + "?");
-/*    playerSelection.toLowerCase();
-    playerSelection.charAt(0).toUpperCase() + playerSelection.slice(1); */
+    playerSelection2 = playerSelection.toLowerCase()
+    playerSelection3 = playerSelection2.charAt(0).toUpperCase() + playerSelection2.slice(1);
     computerSelection = computerPlay();
-    playRound(playerSelection, computerSelection);
+    playRound(playerSelection2, computerSelection);
     console.log(playRound());
 
 
